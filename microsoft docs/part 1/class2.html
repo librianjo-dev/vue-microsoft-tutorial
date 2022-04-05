@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--Criando o elemento HTML-->
+    <div id="app">
+        <!--Usamos handlebars ( {{ }} ) para lidar com informações e código JS dentro do HTML montado pelo vue-->
+        {{ lastName }}, {{ firstName }}
+    </div>
+
+    <!--Adicionando o script do Vue.js à página-->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script>
+        // Criando a aplicação Vue.js
+        const App = Vue.createApp({
+        // Definindo os dados da aplicação
+        data() {
+            return {
+                firstName: 'Paulo',
+                lastName: 'Brito'
+            };
+        }
+    });
+        // Registrando e montando o app
+        App.mount('#app');
+    </script>
+
+</body>
+
+</html>
