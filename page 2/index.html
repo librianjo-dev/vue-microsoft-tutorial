@@ -10,7 +10,7 @@
 <body>
     <h1>Available cruises</h1>
     <div id="app">
-        <div>
+        <div v-for="(cruise, index) in cruises" :key="index">
             {{ cruise.name }}
             <button v-show="cruise.seatsAvailable">
                 <span v-if="cruise.earlyBirdAvailable">Book early bird!</span>
@@ -26,11 +26,23 @@
         const App = {
             data() {
                 return {
-                    cruise: {
-                        seatsAvailable: true,
-                        earlyBirdAvailable: false,
-                        name: 'Cruise to the moon'
-                    }
+                    cruises:[              
+                        {
+                            seatsAvailable: true,
+                            earlyBirdAvailable: false,
+                            name: 'Cruise to the moon'
+                        },
+                        {
+                            seatsAvailable:false,
+                            earlyBirdAvailable: true,
+                            name: 'Cruise to Mars'
+                        },
+                        {
+                            seatsAvailable: true,
+                            earlyBirdAvailable: false,
+                            name: 'Cruise to the asteroid belt'
+                        }
+                    ]
                 }
             }
         }
