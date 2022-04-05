@@ -13,11 +13,17 @@
     <div class="nav-bar"></div>
     <h1>Relecloud Galaxy Tours</h1>
 
-    <!-- TODO: Add information display -->
-
+    <!-- TODO: Exibindo a informação -->
+    <div id="app">
+        <h2> {{ productName }} </h2>
+        <div> {{ productDescription }} </div>
+    </div>
     
-    <!-- TODO: Import Vue app -->
-
+    <!-- TODO: Importando o app Vue -->
+    <script src="index.js"></script>
+    <script>
+        app.mount('#app');
+    </script>
 </body>
 
 </html>
